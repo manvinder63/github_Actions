@@ -2,11 +2,13 @@ name: Creating Dependent Jobs
 on: [push]
 Jobs:
   intialize-repo:
+    runs-on: ubuntu-latest
     steps:
       - name: initializing
         run : echo "Initialization Completed"
   build:
     needs: intialize-repo
+    runs-on: ubuntu-latest
     steps:
       - name: building
         run: echo "Build Completed"
