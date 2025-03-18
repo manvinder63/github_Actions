@@ -1,0 +1,12 @@
+name: Creating Dependent Jobs
+on: [push]
+Jobs:
+  intialize-repo:
+    steps:
+      - name: initializing
+        run : echo "Initialization Completed"
+  build:
+    needs: intialize-repo
+    steps:
+      - name: building
+        run: echo "Build Completed"
