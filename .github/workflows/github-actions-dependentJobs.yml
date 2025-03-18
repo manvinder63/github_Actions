@@ -1,6 +1,6 @@
 name: Creating Dependent Jobs
 on: [push]
-Jobs:
+jobs:
   intialize-repo:
     runs-on: ubuntu-latest
     steps:
