@@ -1,9 +1,9 @@
-name: executing workflow on events
+name: executing workflow on event
 on:
   push:
     - dev
 jobs:
-  push_to_dev_branch:
+  push_to_dev_branch: 
     runs-on: ubuntu-latest
     steps:
       - name: Pushed-To-Dev
