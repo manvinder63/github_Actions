@@ -1,0 +1,10 @@
+name: executing workflow on events
+on:
+  push:
+    - dev
+jobs:
+  push_to_dev_branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pushed-To-Dev
+        run: echo "Successfully trigerred workflow!!"
