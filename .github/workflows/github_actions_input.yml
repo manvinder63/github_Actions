@@ -1,4 +1,4 @@
-name: github_actions_input_demo
+name: github_actions_input_dem
 on:
   workflow_dispatch:
     inputs:
