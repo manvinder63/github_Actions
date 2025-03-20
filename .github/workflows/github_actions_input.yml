@@ -1,0 +1,20 @@
+name: github_actions_input_demo
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log Level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
+jobs:
+  print-logLevel:
+    runs-on: ubuntu-latest
+    steps:
+      - name : Printing Log Level
+        run: echo The logs are ${{ inputs.logLevel }}
+        
