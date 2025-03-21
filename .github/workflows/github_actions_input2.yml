@@ -1,0 +1,17 @@
+name: Accessing Input Varibales v2
+on:
+  workflow_dispatch:
+    inputs:
+      EmployeeId:
+        description: Enter Employee Details
+        required: true
+        default: 'None'
+jobs:
+  PrintEmployeeId:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Display Entered Employee Id
+      env:
+        empId: ${{inputs.EmpoyeeId}}
+      run: echo "The Id of an employee is ${{empid}}"
+        
