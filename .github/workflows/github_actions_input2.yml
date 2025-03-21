@@ -1,9 +1,9 @@
-name: Accessing Input Varibales v2
+name: 'Accessing Input Varibales v2'
 on:
   workflow_dispatch:
     inputs:
       EmployeeId:
-        description: Enter Employee Details
+        description: 'Enter Employee Details'
         required: true
         default: 'None'
 jobs:
