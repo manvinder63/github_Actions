@@ -1,0 +1,11 @@
+name: Event_Properties
+on: push
+jobs:
+  Accessing_Event_Properties:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Event_Properties
+        env:
+          EVENT_CONTEXT: ${{ toJSON(github.event)}}
+        run: |
+          echo "${{EVENT_CONTEXT}}"
