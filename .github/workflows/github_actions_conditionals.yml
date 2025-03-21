@@ -7,5 +7,5 @@ jobs:
       - name: checking_github_conditionals
         env: 
             EVENT_CONTEXT: ${{ toJSON(github.event) }}
-        if: $EVENT_CONTEXT.name == 'manvinder63'
+        if: github.event.name == 'manvinder63'
         run : echo "Hello" $EVENT_CONTEXT.name
