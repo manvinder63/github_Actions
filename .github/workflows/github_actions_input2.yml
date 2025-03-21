@@ -8,10 +8,10 @@ on:
         default: 'None'
 jobs:
   PrintEmployeeId:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Display Entered Employee Id
-      env:
-        empId: ${{inputs.EmpoyeeId}}
-      run: echo "The Id of an employee is ${{empid}}"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Entered Employee Id
+        env:
+          empId: ${{inputs.EmpoyeeId}}
+        run: echo "The Id of an employee is ${{empid}}"
         
