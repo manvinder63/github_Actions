@@ -1,0 +1,14 @@
+name: using_conditionals
+on: push
+jobs:
+  using_conditionals:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking_github_conditionals
+        env: 
+            EVENT_CONTEXT: ${{ toJSON(github.event) }}
+        run : |
+          if $EVENT_CONTEXT.name == 'manvinder63'
+            echo "Hello" $EVENT_CONTEXT.name
+          else
+            echo "Exit"
