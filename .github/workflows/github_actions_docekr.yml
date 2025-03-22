@@ -1,0 +1,17 @@
+name: docker
+on: push
+
+jobs:
+  using_docker:
+    runs-on: ubuntu-latest
+    container:
+      image: node:18
+      env:
+        NODE_ENV: development
+      ports:
+        - 80
+      volumes:
+        - my_docker_volume:/volume_mount
+    steps:
+     - name: Check for dockerenv file
+       run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
