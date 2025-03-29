@@ -1,0 +1,12 @@
+name: Testing_Mask
+on: push
+jobs:
+  MASKING_ENVIRONMENT_VARIABLE:
+    runs-on: ubuntu-latest
+    env:
+      MY_NAME: "MANVINDER SINGH"
+    steps:
+      - name : bash-version
+        run  : echo "::add-mask::$MY_NAME"
+ 
+    
